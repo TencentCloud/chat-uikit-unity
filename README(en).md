@@ -38,7 +38,7 @@
     ```json
       {
         "dependencies":{
-          "com.tencent.imsdk.unity.uikit":"https://github.com/TencentCloud/chat-uikit-unity"
+          "com.tencent.imsdk.unity.uikit":"https://github.com/TencentCloud/chat-uikit-unity.git#unity"
         }
       }
     ```
