@@ -13,8 +13,6 @@
     "C2C"
   ],
   "dependencies": {
-    "com.tencent.imsdk.unity": "https://github.com/TencentCloud/chat-sdk-unity.git#unity",
-    "me.qiankanglai.loopscrollrect": "https://github.com/qiankanglai/LoopScrollRect.git"
   },
   "author": {
     "name": "Tencent",
