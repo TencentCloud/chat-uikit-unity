@@ -82,7 +82,7 @@ public static void Login() {
 You can also pass `SDKAppID`, `UserSig`, `UserID` into the component for Chat initialization and login via configuration。
 
 ```c#
-using Com.Tencent.Chat.UIKit.Unity;
+using com.tencent.imsdk.unity.uikit;
 
 public static void Init() {
   Core.SetConfig(sdkappid, userId, sdkUserSig);
@@ -125,7 +125,7 @@ Tencent Cloud Chat Unity UIKit currently provides sending and rendering of text 
    ```
 3. Register Stickers to UIKit
    ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetStickerPackageList(Config.stickers);
    ```
@@ -141,7 +141,7 @@ Reference the prefabs `ChatPanel` and `ConversationPanel` in the scene and adjus
 Execute `SetConfig`, `Init` and `Login` in Script
 
 ```c#
-    using Com.Tencent.Chat.UIKit.Unity;
+    using com.tencent.imsdk.unity.uikit;
 
       Core.SetConfig(sdkappid, userid, sdkusersig); // Set sdk account information
       Core.Init();
@@ -174,7 +174,7 @@ You can modify the style of your project by modifying the style of the Prefabs, 
 Pass Config information before Init, including `sdkappid`, `userid` and `usersig`.
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetConfig(sdkappid, userid, usersig);
 ```
@@ -184,7 +184,7 @@ Pass Config information before Init, including `sdkappid`, `userid` and `usersig
 The SDK is initialized using the Init method provided by UIKit, which automatically binds the `AddRecvNewMsgCallback` and `SetConvEventCallback` callbacks.
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.Init();
 ```
@@ -194,7 +194,7 @@ The SDK is initialized using the Init method provided by UIKit, which automatica
 Set the list of stickers with `SetStickerPackageList`.
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetStickerPackageList(Config.stickers);
 ```
@@ -204,7 +204,7 @@ Set the list of stickers with `SetStickerPackageList`.
 Login to the account via `Login` and execute the bound callback function when the login is complete.
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.Login((params string[] args) => {
         // Handling Login callbacks
@@ -216,7 +216,7 @@ Login to the account via `Login` and execute the bound callback function when th
 Add a list of messages for a conversation, process them and merge them into the current conversation message dictionary, and trigger the `OnMsgListChanged` event.
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetMessageList(currentConvID, newMsgList, isFinished);
 ```
@@ -226,7 +226,7 @@ Add a list of messages for a conversation, process them and merge them into the 
 Set the currently selected conversation and trigger the `OnCurrentConvChanged` event.
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetMessageList(convID, convType);
 ```
@@ -236,7 +236,7 @@ Set the currently selected conversation and trigger the `OnCurrentConvChanged` e
 Set the currently selected sticker group and trigger the `OnCurrentStickerIndexChanged` event.
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetMessageList(stickerIndex);
 ```
@@ -246,7 +246,7 @@ Set the currently selected sticker group and trigger the `OnCurrentStickerIndexC
 Log out and reset chat data.
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.Logout((string[] parameters) => {
         // Handling Logout Callbacks

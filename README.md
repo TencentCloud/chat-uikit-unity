@@ -82,7 +82,7 @@ public static void Login() {
 您也可将`SDKAppID`、`UserSig`、`UserID`通过配置的方式传入组件内部进行 IM 的初始化和登录。
 
 ```c#
-using Com.Tencent.Chat.UIKit.Unity;
+using com.tencent.imsdk.unity.uikit;
 
 public static void Init() {
   Core.SetConfig(sdkappid, userId, sdkUserSig);
@@ -125,7 +125,7 @@ Tencent Cloud IM Unity UIKit 目前提供文字和表情包的发送和渲染。
    ```
 4. 注册表情包给 UIKit
    ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetStickerPackageList(Config.stickers);
    ```
@@ -141,7 +141,7 @@ Tencent Cloud IM Unity UIKit 目前提供文字和表情包的发送和渲染。
 在 Script 里执行 `SetConfig`, `Init` 以及 `Login`
 
 ```c#
-    using Com.Tencent.Chat.UIKit.Unity;
+    using com.tencent.imsdk.unity.uikit;
 
       Core.SetConfig(sdkappid, userid, sdkusersig); // 设置sdk账号信息
       Core.Init();
@@ -174,7 +174,7 @@ Tencent Cloud IM Unity UIKit 目前提供文字和表情包的发送和渲染。
 在 Init 前传入 Config 信息，包括 `sdkappid`, `userid` 以及 `usersig`。
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetConfig(sdkappid, userid, usersig);
 ```
@@ -184,7 +184,7 @@ Tencent Cloud IM Unity UIKit 目前提供文字和表情包的发送和渲染。
 采用 UIKit 提供的 Init 方法来初始化 SDK，会自动绑定 `AddRecvNewMsgCallback` 和 `SetConvEventCallback` 回调。
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.Init();
 ```
@@ -194,7 +194,7 @@ Tencent Cloud IM Unity UIKit 目前提供文字和表情包的发送和渲染。
 通过 `SetStickerPackageList` 设定表情包列表。
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetStickerPackageList(Config.stickers);
 ```
@@ -204,7 +204,7 @@ Tencent Cloud IM Unity UIKit 目前提供文字和表情包的发送和渲染。
 通过 `Login` 登录账号，登录完成后执行绑定的回调函数。
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.Login((params string[] args) => {
         // 处理Login回调
@@ -216,7 +216,7 @@ Tencent Cloud IM Unity UIKit 目前提供文字和表情包的发送和渲染。
 添加某个会话的消息列表，处理后合并到当前会话消息字典里，并触发 `OnMsgListChanged` 事件。
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetMessageList(currentConvID, newMsgList, isFinished);
 ```
@@ -226,7 +226,7 @@ Tencent Cloud IM Unity UIKit 目前提供文字和表情包的发送和渲染。
 设置当前选中的会话，并触发 `OnCurrentConvChanged` 事件。
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetMessageList(convID, convType);
 ```
@@ -236,7 +236,7 @@ Tencent Cloud IM Unity UIKit 目前提供文字和表情包的发送和渲染。
 设置当前选中的表情包组，并触发 `OnCurrentStickerIndexChanged` 事件。
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.SetMessageList(stickerIndex);
 ```
@@ -246,7 +246,7 @@ Tencent Cloud IM Unity UIKit 目前提供文字和表情包的发送和渲染。
 登出，并清空数据。
 
 ```c#
-   using Com.Tencent.Chat.UIKit.Unity;
+   using com.tencent.imsdk.unity.uikit;
 
       Core.Logout((string[] parameters) => {
         // 处理Logout回调
