@@ -33,16 +33,16 @@
 
 ### Import Package
 
--  1. Create/start an existing Unity project.
-   2. In the `Packages/manifest.json` file, under dependencies, add:
+- Create/start an existing Unity project.
+- In the `Packages/manifest.json` file, under dependencies, add:
     ```json
       {
         "dependencies":{
-          "com.tencent.imsdk.unity.uikit":"https://github.com/TencentCloud/chat-uikit-unity.git#unity"
+          "com.tencent.imsdk.unity":"https://github.com/TencentCloud/chat-sdk-unity.git#unity"
         }
       }
     ```
-- Copy all files from the [Project](https://github.com/TencentCloud/chat-uikit-unity) `Assets` directory to the local `Assets/` folder
+- Download `chat-uikit-unity.unitypackage` from the [Project](https://github.com/TencentCloud/chat-uikit-unity) and import it to the project.
 
 ### Step 1: Initialize and log in to Chat
 

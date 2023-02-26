@@ -33,16 +33,16 @@
 
 ### 导入 Package
 
--  1. 创建/启动已存在的 Unity 项目。
-   2. 在 `Packages/manifest.json` 文件中的 dependencies 下添加：
+- 创建/启动已存在的 Unity 项目。
+- 在 `Packages/manifest.json` 文件中的 dependencies 下添加：
     ```json
       {
         "dependencies":{
-          "com.tencent.imsdk.unity.uikit":"https://github.com/TencentCloud/chat-uikit-unity.git#unity"
+          "com.tencent.imsdk.unity":"https://github.com/TencentCloud/chat-sdk-unity.git#unity"
         }
       }
     ```
-- 复制 [项目](https://github.com/TencentCloud/chat-uikit-unity) `Assets` 目录下所有文件至本地 `Assets/` 文件夹下
+- 下载 [项目](https://github.com/TencentCloud/chat-uikit-unity) 目录下的 `chat-uikit-unity.unitypackage`，并导入资源包。
 
 ### 步骤 1: 初始化并登录 IM
 
